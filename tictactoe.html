@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+  
+  <style>
+    th, td {
+    padding: 5px;
+      width: 1px;
+      
+}
+  </style>
+</head>
+<body onload="wish()">
+  <h1>TIC-TAC-TOE</h1>
+  
+<table border="1" id= "myTable" >
+  <tr>
+    <td><input type='button' value="      " id="button1"       
+               onclick="changeFirst(this.id)"></td>
+    <td><input type='button' value="       "id="button2"        onclick="changeFirst(this.id)"></td>
+    <td><input type='button' value="       "id="button3"   onclick="changeFirst(this.id)"></td>
+    </tr>
+  <tr>
+    <td><input type='button' value="       " id="button4" onclick="changeFirst(this.id)"></td>
+    <td><input type='button' value="       "id="button5" onclick="changeFirst(this.id)" ></td>
+    <td><input type='button' value="       "id="button6" onclick="changeFirst(this.id)" ></td>
+    </tr>
+  <tr>
+    <td><input type='button' value="       "id="button7" onclick="changeFirst(this.id)" ></td>
+    <td><input type='button' value="       "id="button8" onclick="changeFirst(this.id)" ></td>
+    <td><input type='button' value="       " id="button9" onclick="changeFirst(this.id)"></td>
+    </tr>
+    
+  
+  </table>
+ 
+  <script>
+    
+    count=0;
+    function changeFirst(clicked_id)
+    {
+      if(count%2==0)
+        {
+      document.getElementById(clicked_id).value="1";
+          document.getElementById(clicked_id).disabled = true;
+          count++;
+          if(count<8)
+            {
+               alert("Second player \nMake a  selection");
+            }
+          else
+            {
+              alert("Results time");
+            }
+          
+      
+        }
+      else
+        {
+      document.getElementById(clicked_id).value="0";
+          count++;
+          
+              alert("First player \nMake a selection");
+            
+          
+        }
+          
+       
+    }
+   
+    
+    function wish()
+    {
+      alert("First player \nMake a selection");
+      
+    }
+    
+  </script>
+</body>
+</html>
